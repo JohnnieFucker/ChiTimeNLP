@@ -877,7 +877,12 @@ var TimeUnit = function () {
             if (this._tp.tunit[0] > 0 && this._tp.tunit[0] < 10) {
                 _resultTmp[0] = '200' + this._tp.tunit[0].toString();
             }
-
+            var flag = this._tp.tunit.find(function (t) {
+                return t !== -1;
+            });
+            if (!flag) {
+                return false;
+            }
             // 没有设置小时的默认早上8点
             if (this._tp.tunit[3] === -1) {
                 this._tp.tunit[3] = 8;
