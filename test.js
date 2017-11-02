@@ -1,6 +1,7 @@
 const NLP = require('./index');
 
 const test = [
+    '没有时间点',
     'Hi，all。下周一下午三点开会',
     '周一开会',
     '周五开会',
