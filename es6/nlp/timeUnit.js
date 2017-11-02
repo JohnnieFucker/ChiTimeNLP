@@ -826,7 +826,12 @@ class TimeUnit {
         if (this._tp.tunit[0] > 0 && this._tp.tunit[0] < 10) {
             _resultTmp[0] = `200${this._tp.tunit[0].toString()}`;
         }
-        const flag = this._tp.tunit.find(t => t !== -1);
+        let flag = false;
+        this._tp.tunit.forEach((t) => {
+            if (t !== -1) {
+                flag = true;
+            }
+        });
         if (!flag) {
             return false;
         }

@@ -877,8 +877,11 @@ var TimeUnit = function () {
             if (this._tp.tunit[0] > 0 && this._tp.tunit[0] < 10) {
                 _resultTmp[0] = '200' + this._tp.tunit[0].toString();
             }
-            var flag = this._tp.tunit.find(function (t) {
-                return t !== -1;
+            var flag = false;
+            this._tp.tunit.forEach(function (t) {
+                if (t !== -1) {
+                    flag = true;
+                }
             });
             if (!flag) {
                 return false;
