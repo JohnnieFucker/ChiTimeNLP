@@ -1,6 +1,6 @@
 {
   "name": "chi-time-nlp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "中文语句中的时间语义识别。即通过分析中文语句，识别出话语中提到的时间。参考https://github.com/shinyke/Time-NLP",
   "main": "index.js",
   "scripts": {
